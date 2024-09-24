@@ -1,0 +1,77 @@
+:root {
+	--size: 1;
+	--offset-x: -40px;
+	--offset-y: -90px;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	overflow: hidden;
+}
+
+#etienne {
+	scale: 0.5;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+
+	width: calc(100vw * var(--size));
+	height: calc(100vw * var(--size));
+
+	background-image: url("img/head.png");
+	background-size: auto;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+
+#etienne img {
+	position: absolute;
+	/* width: 100%;
+	height: 100%; */
+	max-height: calc(100vw * var(--size));
+	scale: var(--size);
+	z-index: 4;
+	transition: opacity 2s;
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.over.blush {
+	left: calc(472px * var(--size) + var(--offset-x));
+	top:  calc(843px * var(--size) + var(--offset-y));
+	z-index: 3 !important;
+}
+.live.blush {
+	left: calc(453px * var(--size) + var(--offset-x));
+	top:  calc(878px * var(--size) + var(--offset-y));
+	z-index: 2 !important;
+}
+.live.mouth {
+	left: calc(715px * var(--size) + var(--offset-x));
+	top:  calc(916px * var(--size) + var(--offset-y));
+}
+.live.eye.right {
+	left: calc(857px * var(--size) + var(--offset-x));
+	top:  calc(612px * var(--size) + var(--offset-y));
+}
+.live.eye.left {
+	left: calc(460px * var(--size) + var(--offset-x));
+	top:  calc(637px * var(--size) + var(--offset-y));
+}
+.kill.eye.left {
+	left: calc(456px * var(--size) + var(--offset-x));
+	top:  calc(538px * var(--size) + var(--offset-y));
+}
+.kill.eye.right {
+	left: calc(817px * var(--size) + var(--offset-x));
+	top:  calc(514px * var(--size) + var(--offset-y));
+}
+.kill.mouth {
+	left: calc(597px * var(--size) + var(--offset-x));
+	top:  calc(912px * var(--size) + var(--offset-y));
+}
